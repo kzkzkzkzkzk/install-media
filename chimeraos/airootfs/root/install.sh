@@ -121,7 +121,7 @@ if [ "${CHOICE}" == "local" ]; then
     frzr-deploy
     RESULT=$?
 else
-    frzr-deploy chimeraos/chimeraos:${TARGET}
+    frzr-deploy kzkzkzkzkzk/chimeraos:${TARGET}
     RESULT=$?
 fi
 
