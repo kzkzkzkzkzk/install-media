@@ -95,7 +95,7 @@ MENU_SELECT=$(whiptail --menu "Install Options" 25 75 10 \
 if [ "$MENU_SELECT" = "Advanced:" ]; then
   OPTIONS=$(whiptail --separate-output --checklist "Choose options" 10 55 4 \
     "Use Firmware Overrides" "DSDT/EDID" OFF \
-    "Unstable Builds" "" OFF 3>&1 1>&2 2>&3)
+    "Unstable Builds" "" ON 3>&1 1>&2 2>&3)
 
   if echo "$OPTIONS" | grep -q "Use Firmware Overrides"; then
     echo "Enabling firmware overrides..."
@@ -138,7 +138,7 @@ if [ "${CHOICE}" == "local" ]; then
     frzr-deploy
     RESULT=$?
 else
-    frzr-deploy chimeraos/chimeraos:${TARGET}
+    frzr-deploy kzkzkzkzkzk/chimeraos:${TARGET}
     RESULT=$?
 fi
 
